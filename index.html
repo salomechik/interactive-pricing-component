@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./reset.interactive">
-  <link rel="stylesheet" href="./index.css">
-  <title>Frontend Mentor | Interactive pricing component</title>
-</head>
-<body>
-  <div class="main">
-    <h1 class="title">Simple, traffic-based pricing</h1>
-    <p class="paragraph">Sign-up for our 30-day trial. 
-    No credit card required. </p>
-  </div>
-  <div class="box">
-    <div class="inputbox">
-      <h2 class="pageviews">100K pageviews</h2>
-      <h1 class="numbers">$16.00</h1>
-      <h2 class="month">/month</h2>
-      <input class="green" type="range">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./reset.interactive" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="main">
+      <img src="./images/pattern-circles.svg" class="circles" />
+      <h1 class="title">Simple, traffic-based pricing</h1>
+      <p class="paragraph">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
     </div>
-    <div class="middlepart">
-      <h2 class="monthly">Monthly Billing</h2>
-      <button class="grey"></button>
-      <h2 class="yearly">Yearly Billing</h2>
-      <circle class="discount">25% discount</circle>
+    <div class="box">
+      <div class="inputbox">
+        <h2 class="pageviews">100K pageviews</h2>
+        <div class="numbermonth">
+          <h1 class="numbers">$16.00</h1>
+          <h2 class="month">/ month</h2>
+        </div>
+        <input class="green" type="range" />
+      </div>
+      <div class="middlepart">
+        <h2 class="monthly">Monthly Billing</h2>
+        <div class="grey">
+          <div class="ball"></div>
+        </div>
+        <h2 class="yearly">Yearly Billing</h2>
+        <button class="discount">-25%</button>
+      </div>
+      <div class="lastpart">
+        <div class="container">
+          <div class="first">
+            <img class="check" src="./images/icon-check.svg" />
+            <h3 class="unlimited">Unlimited websites</h3>
+          </div>
+          <div class="second">
+            <img class="check" src="./images/icon-check.svg" />
+            <h3 class="dataownership">100% data ownership</h3>
+          </div>
+          <div class="third">
+            <img class="check" src="./images/icon-check.svg" />
+            <h3 class="emailreports">Email reports</h3>
+          </div>
+        </div>
+        <button class="starttrial">Start my trial</button>
+      </div>
     </div>
-    <div class="lastpart">
-      <div class="first">
-        <img class="check" src="./images/icon-check.svg">
-        <h3 class="unlimited">Unlimited websites</h3>
-      </div>
-      <div class="second">
-        <img class="check" src="./images/icon-check.svg">
-        <h3 class="dataownership">100% data ownership</h3>
-      </div>
-      <div class="third">
-        <img class="check" src="./images/icon-check.svg">
-        <h3 class="emailreports">Email reports</h3>
-      </div>
-      <button class="starttrial">Start my trial</button>
-    </div>
-  </div>
-  <script src="./index.js"></script>
-</body>
+    <script src="./index.js"></script>
+  </body>
 </html>

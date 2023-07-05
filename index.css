@@ -1,50 +1,298 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: none;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #ffffff;
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  background-image: url(./images/bg-pattern.svg);
+  display: flex;
+  flex-direction: column;
+  background-image: url("./images/bg-pattern.svg");
   background-repeat: no-repeat;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  background-size: 150vh;
+  padding-bottom: 88px;
 }
 
-.titlepart {
-  width: 40%;
+input[type=range] {
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.6);
+  background-size: 50% 100%;
+  width: 90%;
+  height: 7px;
+  border-radius: 5px;
+  background-image: linear-gradient(#a4f3eb, #a4f3eb);
+  background-repeat: no-repeat;
 }
 
-.titlepart .titlepart__title {
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #10d8c4;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.main {
+  display: flex;
+  padding: 57px 32px 32px 31px;
+}
+.main .circles {
+  margin: auto;
+  position: relative;
+}
+.main .title {
+  position: absolute;
+  width: 90%;
+  font-size: 20px;
+  margin: auto;
+  top: 90px;
   color: #293356;
+  font-size: 20px;
+  font-family: Manrope;
+  font-style: normal;
+  text-align: center;
   font-weight: 800;
-  z-index: 2;
-  margin-top: 89px;
+  line-height: normal;
+}
+.main .paragraph {
+  position: absolute;
+  margin: auto;
+  font-size: 13px;
+  width: 80%;
+  text-align: center;
+  padding: 0 70px;
+  top: 120px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #848ead;
 }
 
-.titlepart .titlepart__paragraph {
-  color: #848EAD;
+.box {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.15);
   text-align: center;
-  font-weight: 600;
-  line-height: 23px;
-  margin-top: 5px;
-  width: 20%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 32px;
+  flex-direction: column;
+  padding-top: 34px;
+  margin-bottom: 88px;
 }
-/*# sourceMappingURL=index.css.map */
+.box .inputbox {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.box .inputbox .pageviews {
+  color: #848ead;
+  text-align: center;
+  font-size: 12px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 1.714px;
+  text-transform: uppercase;
+  order: -2;
+}
+.box .inputbox .numbermonth {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 7px;
+  order: 3;
+  margin-top: 24px;
+}
+.box .inputbox .numbermonth .numbers {
+  color: #293356;
+  text-align: right;
+  font-size: 32px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.8px;
+}
+.box .inputbox .numbermonth .month {
+  color: #848ead;
+  text-align: center;
+  font-size: 14px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 10px;
+}
+.box .inputbox .green {
+  border-radius: 5px;
+  margin-top: 25px;
+  order: -1;
+}
+
+.middlepart {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin: auto;
+  margin-top: 36px;
+}
+.middlepart .monthly {
+  color: #848ead;
+  text-align: center;
+  font-size: 12px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.middlepart .grey {
+  width: 43px;
+  height: 22px;
+  border-radius: 15px;
+  background-color: #cfd8ef;
+}
+.middlepart .grey .ball {
+  background-color: #fff;
+  z-index: 3;
+  border-radius: 50%;
+}
+.middlepart .yearly {
+  color: #848ead;
+  text-align: center;
+  font-size: 12px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.middlepart .discount {
+  border-radius: 9.5px;
+  background: #feede8;
+  width: 41px;
+  height: 19px;
+  flex-shrink: 0;
+  color: #ff8d68;
+  text-align: center;
+  font-size: 10px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.line {
+  width: 100%;
+}
+
+.lastpart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 63px;
+}
+.lastpart .container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 11px;
+}
+.lastpart .first,
+.lastpart .second,
+.lastpart .third {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.lastpart .first .check,
+.lastpart .second .check,
+.lastpart .third .check {
+  width: 6.949px;
+  height: 5.042px;
+  margin-top: 5px;
+}
+.lastpart .first .unlimited,
+.lastpart .first .dataownership,
+.lastpart .first .emailreports,
+.lastpart .second .unlimited,
+.lastpart .second .dataownership,
+.lastpart .second .emailreports,
+.lastpart .third .unlimited,
+.lastpart .third .dataownership,
+.lastpart .third .emailreports {
+  color: #848ead;
+  font-size: 12px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.lastpart .starttrial {
+  margin: auto;
+  margin-top: 33px;
+  border-radius: 20.5px;
+  background: #293356;
+  padding: 13px 46px;
+  color: #becdff;
+  text-align: center;
+  font-size: 12px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-size: 100%;
+  }
+  .main {
+    display: flex;
+  }
+  .title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+  }
+  .paragraph {
+    left: 150px;
+    font-size: 15px;
+  }
+  .inputbox {
+    display: flex;
+    flex-direction: row;
+  }
+  .numbermonth {
+    order: 1;
+  }
+  .green {
+    order: 2;
+    width: 10%;
+  }
+  .lastpart {
+    display: flex;
+    flex-direction: row;
+  }
+  .box {
+    width: 40%;
+    padding: 58px 48px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=index.css.map */
