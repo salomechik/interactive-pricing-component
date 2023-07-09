@@ -11,7 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./reset.interactive" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./pricingcomponent.css" />
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
   <body>
@@ -24,12 +24,12 @@
     </div>
     <div class="box">
       <div class="inputbox">
-        <h2 class="pageviews">100K pageviews</h2>
-        <div class="numbermonth">
-          <h1 class="numbers">$16.00</h1>
-          <h2 class="month">/ month</h2>
-        </div>
-        <input class="green" type="range" />
+          <h2 class="pageviews">100K pageviews</h2>
+          <div class="numbermonth">
+            <h1 class="numbers">$16.00</h1>
+            <h2 class="month">/ month</h2>
+          </div>
+        <input class="range" type="range"  min="0" max="100" step="25"  />
       </div>
       <div class="middlepart">
         <h2 class="monthly">Monthly Billing</h2>
@@ -37,8 +37,11 @@
           <div class="ball"></div>
         </div>
         <h2 class="yearly">Yearly Billing</h2>
-        <button class="discount">-25%</button>
+        <button class="discount">
+          -25% <span class="hidden">discount</span>
+        </button>
       </div>
+      <hr class="line">
       <div class="lastpart">
         <div class="container">
           <div class="first">
